@@ -1,0 +1,120 @@
+.productBlock {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.productBlock .images {
+  float: left;
+  width: 38%;
+  padding: 0 5% 0 2%;
+}
+.productBlock .images img {
+  width: 100%;
+}
+.productBlock .images .miniSlider {
+  margin-top: 8px;
+}
+.productBlock .images .miniSlider .miniImg {
+  margin: 0 2px;
+  border: 1px solid #e8e8e8;
+  outline: none;
+}
+.productBlock .images .miniSlider .miniImg.slick-current {
+  border: 1px solid #ac2929;
+}
+.productBlock .info {
+  float: left;
+  width: 52%;
+  padding-right: 3%;
+  font-family: 'PragmaticaCondC', arial;
+}
+.productBlock .info .params {
+  margin-top: 10px;
+}
+.productBlock .info .title {
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.productBlock .info .title:after {
+  display: block;
+  content: '';
+  width: 20%;
+  border-top: 1px solid #c8c8c8;
+  margin-top: 10px;
+}
+.productBlock .info .label {
+  font-size: 14px;
+  color: #000;
+  font-family: 'proxima_nova_rgregular';
+  padding: 0;
+  font-weight: 300;
+}
+.productBlock .info .price {
+  margin-bottom: 15px;
+}
+.productBlock .info .price:after {
+  display: block;
+  content: '';
+  width: 20%;
+  border-top: 1px solid #c8c8c8;
+  margin-top: 10px;
+}
+.productBlock .info .price .currentPrice {
+  font-size: 40px;
+  line-height: 1;
+}
+.productBlock .info .descBlock {
+  margin-top: 15px;
+}
+.productBlock .info .descBlock .label {
+  text-transform: uppercase;
+}
+.productBlock .info .descBlock .text {
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+}
+.productBlock .info .addToCart {
+  margin-top: 15px;
+}
+.productBlock .info .number {
+  margin-top: 10px;
+}
+.productBlock .info .number input[type=text] {
+  margin-top: 10px;
+  height: 32px;
+  text-align: center;
+  font-size: 16px;
+  width: 65px;
+}
+.productBlock .info .selectParams {
+  margin-top: 5px;
+}
+.productBlock .info .selectParams.colors ul li {
+  text-transform: capitalize;
+}
+.productBlock .info .selectParams ul li {
+  display: inline-block;
+  height: 29px;
+  min-width: 29px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-align: center;
+  line-height: 29px;
+  margin: 0 10px;
+}
+.productBlock .info .selectParams ul li a {
+  color: #ac2929;
+  text-decoration: none;
+  cursor: pointer;
+}
+.productBlock .info .selectParams ul li a.active {
+  border-bottom: 1px dashed #ac2929;
+}
+.productBlock .info .selectParams ul li a:hover {
+  border-bottom: 1px dashed #ac2929;
+}

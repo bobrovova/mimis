@@ -1,0 +1,63 @@
+footer {
+  background-color: #4a4848;
+  width: 100%;
+  padding-top: 69px;
+  padding-bottom: 40px;
+  margin-top: 80px;
+}
+footer .top {
+  padding-bottom: 53px;
+  border-bottom: 1px solid #666666;
+}
+footer .top .title {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.8em;
+}
+footer .down {
+  padding-top: 12px;
+}
+footer .down .title {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.8em;
+}
+footer .down .service ul li a {
+  font-family: PragmaticaCondC;
+  color: #cccccc;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+footer .social {
+  float: right;
+}
+footer .subscrube {
+  float: left;
+}
+footer .subscrube .subtitle {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.4em;
+  margin-bottom: 12px;
+}
+footer .subscrube input {
+  background-color: #ffffff;
+  width: 337px;
+  height: 33px;
+  font-family: PragmaticaCondC;
+  color: #333333;
+  font-size: 14px;
+  border: 1px;
+  background: url("../images/icon_mail.png") no-repeat 7px center, #ffffff;
+  padding: 0 2% 0 40px;
+}
+footer .subscrube a {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.6em;
+  text-decoration: none;
+  padding: 3px 32px 5px;
+  background-color: #993399;
+  border: 1px solid #ccc;
+  display: inline-block;
+}

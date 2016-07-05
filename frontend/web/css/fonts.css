@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'PragmaticaCondC';
+  src: url('../fonts/pragmaticacondc_[allfont.ru].eot');
+  src: local('☺'), url('../fonts/pragmaticacondc_[allfont.ru].woff') format('woff'), url('../fonts/pragmaticacondc_[allfont.ru].ttf') format('truetype'), url('../fonts/pragmaticacondc_[allfont.ru].svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansProRegular.eot');
+  src: local('☺'), url('../fonts/SourceSansProRegular.woff') format('woff'), url('../fonts/SourceSansProRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,1088 @@
+html,
+body,
+div,
+ul,
+.row {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+}
+.row {
+  width: 100%;
+}
+@font-face {
+  font-family: 'PragmaticaCondC';
+  src: url('../fonts/pragmaticacondc_[allfont.ru].eot');
+  src: local('☺'), url('../fonts/pragmaticacondc_[allfont.ru].woff') format('woff'), url('../fonts/pragmaticacondc_[allfont.ru].ttf') format('truetype'), url('../fonts/pragmaticacondc_[allfont.ru].svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../fonts/SourceSansProRegular.eot');
+  src: local('☺'), url('../fonts/SourceSansProRegular.woff') format('woff'), url('../fonts/SourceSansProRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Roboto Regular'; */
+@font-face {
+  font-family: 'robotoregular';
+  src: url('../fonts/Roboto_Regular/roboto-regular-webfont.eot');
+  src: url('../fonts/Roboto_Regular/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto_Regular/roboto-regular-webfont.woff2') format('woff2'), url('../fonts/Roboto_Regular/roboto-regular-webfont.woff') format('woff'), url('../fonts/Roboto_Regular/roboto-regular-webfont.ttf') format('truetype'), url('../fonts/Roboto_Regular/roboto-regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Roboto Light'; */
+@font-face {
+  font-family: 'robotolight';
+  src: url('../fonts/Roboto_Light/roboto-light-webfont.eot');
+  src: url('../fonts/Roboto_Light/roboto-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto_Light/roboto-light-webfont.woff2') format('woff2'), url('../fonts/Roboto_Light/roboto-light-webfont.woff') format('woff'), url('../fonts/Roboto_Light/roboto-light-webfont.ttf') format('truetype'), url('../fonts/Roboto_Light/roboto-light-webfont.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Roboto Medium */
+@font-face {
+  font-family: 'robotomedium';
+  src: url('../fonts/Roboto_Medium/roboto-medium-webfont.eot');
+  src: url('../fonts/Roboto_Medium/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto_Medium/roboto-medium-webfont.woff2') format('woff2'), url('../fonts/Roboto_Medium/roboto-medium-webfont.woff') format('woff'), url('../fonts/Roboto_Medium/roboto-medium-webfont.ttf') format('truetype'), url('../fonts/Roboto_Medium/roboto-medium-webfont.svg#robotomedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Roboto Bold"; */
+@font-face {
+  font-family: 'robotobold';
+  src: url('../fonts/Roboto_Bold/roboto-bold-webfont.eot');
+  src: url('../fonts/Roboto_Bold/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto_Bold/roboto-bold-webfont.woff2') format('woff2'), url('../fonts/Roboto_Bold/roboto-bold-webfont.woff') format('woff'), url('../fonts/Roboto_Bold/roboto-bold-webfont.ttf') format('truetype'), url('../fonts/Roboto_Bold/roboto-bold-webfont.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Roboto Black"; */
+@font-face {
+  font-family: 'robotoblack';
+  src: url('../fonts/Roboto_Black/3953-webfont.eot');
+  src: url('../fonts/Roboto_Black/3953-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto_Black/3953-webfont.woff2') format('woff2'), url('../fonts/Roboto_Black/3953-webfont.woff') format('woff'), url('../fonts/Roboto_Black/3953-webfont.ttf') format('truetype'), url('../fonts/Roboto_Black/3953-webfont.svg#robotoblack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Proxima Nova Bold"; */
+@font-face {
+  font-family: 'proxima_nova_thextrabold';
+  src: url('../fonts/Proxima_Nova_Extrabold/proxima_nova_extrabold-webfont.eot');
+  src: url('../fonts/Proxima_Nova_Extrabold/proxima_nova_extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Proxima_Nova_Extrabold/proxima_nova_extrabold-webfont.woff2') format('woff2'), url('../fonts/Proxima_Nova_Extrabold/proxima_nova_extrabold-webfont.woff') format('woff'), url('../fonts/Proxima_Nova_Extrabold/proxima_nova_extrabold-webfont.ttf') format('truetype'), url('../fonts/Proxima_Nova_Extrabold/proxima_nova_extrabold-webfont.svg#proxima_nova_thextrabold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Proxima Nova Bold"; */
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url('../fonts/Proxima_Nova_Bold/proxima_nova_bold-webfont.eot');
+  src: url('../fonts/Proxima_Nova_Bold/proxima_nova_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Proxima_Nova_Bold/proxima_nova_bold-webfont.woff2') format('woff2'), url('../fonts/Proxima_Nova_Bold/proxima_nova_bold-webfont.woff') format('woff'), url('../fonts/Proxima_Nova_Bold/proxima_nova_bold-webfont.ttf') format('truetype'), url('../fonts/Proxima_Nova_Bold/proxima_nova_bold-webfont.svg#proxima_nova_rgbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Proxima Nova Regular"; */
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url('../fonts/Proxima_Nova_Regular/proxima_nova_regular-webfont.eot');
+  src: url('../fonts/Proxima_Nova_Regular/proxima_nova_regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Proxima_Nova_Regular/proxima_nova_regular-webfont.woff2') format('woff2'), url('../fonts/Proxima_Nova_Regular/proxima_nova_regular-webfont.woff') format('woff'), url('../fonts/Proxima_Nova_Regular/proxima_nova_regular-webfont.ttf') format('truetype'), url('../fonts/Proxima_Nova_Regular/proxima_nova_regular-webfont.svg#proxima_nova_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: "Proxima Nova Light"; */
+@font-face {
+  font-family: 'proxima_nova_ltlight';
+  src: url('../fonts/Proxima_Nova_Light/proxima_nova_light-webfont.eot');
+  src: url('../fonts/Proxima_Nova_Light/proxima_nova_light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Proxima_Nova_Light/proxima_nova_light-webfont.woff2') format('woff2'), url('../fonts/Proxima_Nova_Light/proxima_nova_light-webfont.woff') format('woff'), url('../fonts/Proxima_Nova_Light/proxima_nova_light-webfont.ttf') format('truetype'), url('../fonts/Proxima_Nova_Light/proxima_nova_light-webfont.svg#proxima_nova_ltlight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #efefef;
+}
+.wrap {
+  max-width: 1141px;
+  width: 89%;
+  margin: 0 auto;
+}
+.clear {
+  overflow: hidden;
+}
+.block {
+  background-color: #fff;
+  margin: 65px auto 0;
+  padding-top: 1px;
+  padding-bottom: 90px;
+}
+.block > .title {
+  font-family: PragmaticaCondC;
+  color: #000000;
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  margin-top: 6px;
+  height: 60px;
+}
+.block > .title .hr {
+  display: inline-block;
+  border-top: 1px solid #000000;
+  width: 97%;
+}
+.block > .title .text {
+  position: relative;
+  display: inline-block;
+  top: -33px;
+  background-color: #fff;
+  padding: 0 10px;
+}
+.block .slider {
+  width: 90%;
+  margin: 0 auto;
+}
+.block .slider .item {
+  width: 14%;
+  margin-left: 2.9%;
+  display: inline-block;
+  text-align: center;
+}
+.block .slider .item:nth-child(1) {
+  margin-left: 0;
+}
+.item .image {
+  width: 100%;
+  overflow: hidden;
+  height: 235px;
+}
+.item .image img {
+  height: auto;
+}
+.item .title {
+  font-family: 'PragmaticaCondC';
+  color: #000000;
+  font-size: 18px;
+}
+.item .price {
+  font-family: PragmaticaC;
+  color: #993399;
+  font-size: 18px;
+  /* Approximation due to font substitution */
+  font-weight: 700;
+}
+.seeMore {
+  margin-top: 14px;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+.seeMore a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 0px 10px 21px;
+  background: url("../images/see_all.png") no-repeat left center;
+  font-family: 'Source Sans Pro';
+  color: #333333;
+  font-size: 14px;
+}
+.bread {
+  font-family: 'PragmaticaCondC', arial;
+  color: #993399;
+  padding: 15px 0 0 15px;
+  margin-bottom: 18px;
+}
+.bread ul {
+  font-size: 14px;
+}
+.bread ul li {
+  display: inline-block;
+  padding: 0 1px;
+}
+.bread ul li a {
+  color: #993399;
+  text-decoration: underline;
+}
+.bread ul li.last {
+  color: #000000;
+}
+a.simpleLink {
+  color: #993399;
+  font-family: 'PragmaticaCondC', arial;
+  font-size: 14px;
+}
+.notify {
+  background: #ffffc6;
+  text-align: center;
+  border: 1px solid #c8c8c8;
+  padding: 17px 0 10px;
+  margin-bottom: 31px;
+}
+.notify.error .title {
+  color: #ff0000;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+.notify.error .subtitle {
+  color: #666666;
+  font-size: 1.8em;
+}
+.notify.success .title {
+  color: #19c028;
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+.notify.success .subtitle {
+  color: #666666;
+  font-size: 1.8em;
+}
+header {
+  width: 100%;
+  min-width: 1240px;
+  padding-top: 32px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #fff;
+}
+header > .row {
+  position: relative;
+}
+header > .row .searchForm {
+  left: 21%;
+  top: 15px;
+}
+header .headerLoginLink {
+  font-family: Arial;
+  color: #993399;
+  font-size: 14px;
+  text-decoration: none;
+  top: 57px;
+  right: 10.5%;
+  position: absolute;
+}
+header .headerLoginLink a {
+  font-family: Arial;
+  color: #993399;
+  font-size: 14px;
+  text-decoration: none;
+}
+header .logo {
+  margin: 0 7%;
+  float: left;
+}
+header .cart {
+  float: right;
+  margin-right: 7%;
+  padding-left: 50px;
+  background: url("../images/cart.png") no-repeat left top;
+  height: 50px;
+  width: 200px;
+  font-family: Arial;
+}
+header .cart .title {
+  color: #000000;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+header .cart .content {
+  color: #999999;
+  font-size: 1.4em;
+}
+header .nav {
+  border-top: 1px solid #c8c8c8;
+  margin-top: 27px;
+  clear: both;
+}
+header .nav ul.mainMenu {
+  margin: 0 7%;
+  text-transform: uppercase;
+}
+header .nav ul.mainMenu a {
+  text-decoration: none;
+  color: #666666;
+  font-size: 1.4em;
+  font-family: 'PragmaticaCondC', arial;
+}
+header .nav ul.mainMenu li {
+  display: inline-block;
+  padding: 11px 15px 12px;
+  border-left: 1px solid #c8c8c8;
+}
+header .nav ul.mainMenu li:nth-child(1) {
+  border-left: none;
+}
+header .nav ul.mainMenu li.searchForm {
+  float: right;
+  border-left: 0;
+  padding: 5px 0 6px;
+}
+header .searchForm {
+  position: relative;
+  display: inline-block;
+}
+header .searchForm input {
+  height: 32px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  width: 250px;
+  font-family: PragmaticaCondC;
+  color: #999999;
+  font-size: 14px;
+  padding: 0 15px;
+  outline: none;
+}
+header .searchForm .searchBtn {
+  background: url("../images/search.png") no-repeat;
+  border: medium none;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 2px;
+  background-size: auto 30px;
+  top: 50%;
+  margin-top: -15px;
+}
+footer {
+  background-color: #4a4848;
+  width: 100%;
+  padding-top: 69px;
+  padding-bottom: 40px;
+  margin-top: 80px;
+}
+footer .top {
+  padding-bottom: 53px;
+  border-bottom: 1px solid #666666;
+}
+footer .top .title {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.8em;
+}
+footer .down {
+  padding-top: 12px;
+}
+footer .down .title {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.8em;
+}
+footer .down .service ul li a {
+  font-family: PragmaticaCondC;
+  color: #cccccc;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+footer .social {
+  float: right;
+}
+footer .subscrube {
+  float: left;
+}
+footer .subscrube .subtitle {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.4em;
+  margin-bottom: 12px;
+}
+footer .subscrube input {
+  background-color: #ffffff;
+  width: 337px;
+  height: 33px;
+  font-family: PragmaticaCondC;
+  color: #333333;
+  font-size: 14px;
+  border: 1px;
+  background: url("../images/icon_mail.png") no-repeat 7px center, #ffffff;
+  padding: 0 2% 0 40px;
+}
+footer .subscrube a {
+  font-family: PragmaticaCondC;
+  color: #ffffff;
+  font-size: 1.6em;
+  text-decoration: none;
+  padding: 3px 32px 5px;
+  background-color: #993399;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+.indexMenu {
+  height: 95px;
+  border: 1px solid #cccccc;
+  background: -webkit-linear-gradient(90deg, #efefef 0%, #ffffff 100%);
+  background: -moz-linear-gradient(90deg, #efefef 0%, #ffffff 100%);
+  background: -o-linear-gradient(90deg, #efefef 0%, #ffffff 100%);
+  background: -ms-linear-gradient(90deg, #efefef 0%, #ffffff 100%);
+  background: linear-gradient(0deg, #efefef 0%, #ffffff 100%);
+  width: 100%;
+  margin-top: 1%;
+}
+.indexMenu ul {
+  margin-top: 17px;
+  text-align: center;
+}
+.indexMenu ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 0 4%;
+}
+.indexMenu ul li .imgForItem {
+  border: 2px solid #993399;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 6px;
+  line-height: 41px;
+}
+.indexMenu ul li a {
+  font-family: PragmaticaCondC;
+  color: #663333;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.loginBlock {
+  font-family: PragmaticaCondC;
+}
+.loginBlock .col-2 {
+  width: 48.5%;
+}
+.loginBlock .col-2:nth-child(1) {
+  padding-right: 1%;
+  float: left;
+}
+.loginBlock .col-2:nth-child(2) {
+  padding-left: 1%;
+  float: right;
+}
+.loginBlock .content {
+  padding: 0 1.5%;
+}
+.loginBlock .myContainer {
+  display: table;
+  margin: 35px auto 0;
+}
+.loginBlock .myContainer #containerSubmit {
+  text-align: right;
+  display: table-cell;
+  padding-right: 10px;
+  width: 50%;
+}
+.loginBlock .myContainer #containerSubmit input.btn {
+  margin: 0;
+  display: inline-block;
+}
+.loginBlock .myContainer #containerResetPass {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 10px;
+  width: 50%;
+}
+.form .row {
+  display: table;
+  margin-top: 20px;
+}
+.form .row:nth-child(1) {
+  margin-top: 0;
+}
+.form .row .labelForm {
+  width: 23%;
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  color: #333333;
+  font-size: 1.8em;
+}
+.form .row .input {
+  width: 74%;
+  display: table-cell;
+  padding-left: 3%;
+}
+.form .row .input input {
+  height: 40px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  color: #333333;
+  font-size: 1.8em;
+  padding: 0 15px;
+}
+.form input.btn {
+  display: block;
+  margin: 35px auto 0;
+  padding: 9px 23px;
+  color: #ffffff;
+  font-size: 1.8em;
+  background-color: #ff6633;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.form input.btn.reg {
+  max-width: 208px;
+}
+.labelMain {
+  font-size: 18px;
+}
+.productBlock {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.productBlock .images {
+  float: left;
+  width: 38%;
+  padding: 0 5% 0 2%;
+}
+.productBlock .images img {
+  width: 100%;
+}
+.productBlock .images .miniSlider {
+  margin-top: 8px;
+}
+.productBlock .images .miniSlider .miniImg {
+  margin: 0 2px;
+  border: 1px solid #e8e8e8;
+  outline: none;
+}
+.productBlock .images .miniSlider .miniImg.slick-current {
+  border: 1px solid #ac2929;
+}
+.productBlock .info {
+  float: left;
+  width: 52%;
+  padding-right: 3%;
+  font-family: 'PragmaticaCondC', arial;
+}
+.productBlock .info .params {
+  margin-top: 10px;
+}
+.productBlock .info .title {
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+.productBlock .info .title:after {
+  display: block;
+  content: '';
+  width: 20%;
+  border-top: 1px solid #c8c8c8;
+  margin-top: 10px;
+}
+.productBlock .info .label {
+  font-size: 14px;
+  color: #000;
+  font-family: 'proxima_nova_rgregular';
+  padding: 0;
+  font-weight: 300;
+}
+.productBlock .info .price {
+  margin-bottom: 15px;
+}
+.productBlock .info .price:after {
+  display: block;
+  content: '';
+  width: 20%;
+  border-top: 1px solid #c8c8c8;
+  margin-top: 10px;
+}
+.productBlock .info .price .currentPrice {
+  font-size: 40px;
+  line-height: 1;
+}
+.productBlock .info .descBlock {
+  margin-top: 15px;
+}
+.productBlock .info .descBlock .label {
+  text-transform: uppercase;
+}
+.productBlock .info .descBlock .text {
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+}
+.productBlock .info .addToCart {
+  margin-top: 15px;
+}
+.productBlock .info .number {
+  margin-top: 10px;
+}
+.productBlock .info .number input[type=text] {
+  margin-top: 10px;
+  height: 32px;
+  text-align: center;
+  font-size: 16px;
+  width: 65px;
+}
+.productBlock .info .selectParams {
+  margin-top: 5px;
+}
+.productBlock .info .selectParams.colors ul li {
+  text-transform: capitalize;
+}
+.productBlock .info .selectParams ul li {
+  display: inline-block;
+  height: 29px;
+  min-width: 29px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-align: center;
+  line-height: 29px;
+  margin: 0 10px;
+}
+.productBlock .info .selectParams ul li a {
+  color: #ac2929;
+  text-decoration: none;
+  cursor: pointer;
+}
+.productBlock .info .selectParams ul li a.active {
+  border-bottom: 1px dashed #ac2929;
+}
+.productBlock .info .selectParams ul li a:hover {
+  border-bottom: 1px dashed #ac2929;
+}
+.deliveryBlock {
+  width: 50%;
+  padding: 0 3%;
+  float: left;
+}
+.deliveryBlock .select > div,
+.paymentBlock .select > div {
+  margin-top: 10px;
+}
+.deliveryBlock .select input[type="radio"] + label::before,
+.paymentBlock .select input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  float: left;
+  height: 18px;
+  width: 18px;
+  margin: 0 5px 0 0;
+  background-image: url("../images/unchecked.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.deliveryBlock .select input[type="radio"]:checked + label::before,
+.paymentBlock .select input[type="radio"]:checked + label::before {
+  background-image: url("../images/checked.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.deliveryBlock .select input[type="radio"]:disabled + label::before,
+.paymentBlock .select input[type="radio"]:disabled + label::before {
+  background-image: url("../images/unchecked.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.deliveryBlock .select label,
+.paymentBlock .select label {
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  color: #999999;
+  font-weight: 300;
+}
+.personBlock {
+  width: 50%;
+  padding: 0 3%;
+  float: left;
+}
+.ordering .titleBlock {
+  font-family: 'PragmaticaCondC', arial;
+  color: #333333;
+  font-size: 18px;
+  text-align: center;
+}
+.ordering .form .row {
+  margin-top: 7px;
+}
+.ordering .form .row .labelForm {
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  color: #999999;
+  font-weight: 300;
+}
+.ordering .form .row .input input {
+  height: 28px;
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  line-height: 29px;
+}
+.ordering .col-3 {
+  margin-top: 20px;
+  float: left;
+  width: 33.3%;
+}
+.ordering .col-3 .labelForm {
+  width: 16%;
+}
+.ordering .col-3.details.form .row {
+  width: 33.3%;
+  float: left;
+}
+.ordering .col-3.details.form .row .labelForm {
+  text-align: right;
+  width: 70%;
+  padding-right: 5%;
+}
+.ordering .col-3.details.form .row .input {
+  text-align: right;
+  width: 30%;
+}
+.ordering .col-3.details.form .row .input input {
+  width: 100%;
+  padding: 0 2px;
+  text-align: center;
+}
+.separate {
+  border-top: 2px solid #ccc;
+  width: 96%;
+  margin: 20px auto;
+}
+.address {
+  width: 94%;
+  margin: 0 auto;
+}
+.address .titleBlock {
+  text-align: left;
+  padding-left: 15px;
+}
+a.btnService {
+  margin-top: 40px;
+  border: 1px solid #cccccc;
+  background-color: #ff6633;
+  padding: 14px 55px;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+a.btnService:hover {
+  background-color: #FF5921;
+}
+.btnService {
+  margin-top: 40px;
+  border: 1px solid #cccccc;
+  background-color: #ff6633;
+  padding: 14px 55px;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btnService:hover {
+  background-color: #FF5921;
+}
+.paymentBlock {
+  width: 94%;
+  padding: 0 3%;
+}
+.paymentBlock .titleBlock {
+  text-align: left;
+}
+.paymentBlock .select input[type="radio"] + label::before {
+  margin-top: 6px;
+}
+.paymentBlock label .big {
+  font-size: 18px;
+  color: #000;
+  font-family: 'PragmaticaCondC', arial;
+}
+.paymentBlock label .small {
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  color: #999999;
+  font-weight: 300;
+  padding-left: 23px;
+}
+.progressBlock {
+  width: 90%;
+  margin: 0 auto 30px;
+}
+.progressBlock .arrow {
+  width: 32.9%;
+  height: 37px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  color: #333333;
+  font-family: 'PragmaticaCondC', arial;
+  line-height: 36px;
+  background-color: #f7f7f7;
+  text-align: center;
+  font-size: 18px;
+  border-left: 1px solid #ccc;
+}
+.progressBlock .arrow:nth-of-type(n+2) {
+  margin-left: -4px;
+}
+.progressBlock .arrow:nth-of-type(1) {
+  z-index: 3;
+  border-left: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+.progressBlock .arrow:nth-of-type(2) {
+  z-index: 2;
+}
+.progressBlock .arrow:nth-of-type(3) {
+  z-index: 1;
+}
+.progressBlock .arrow:after,
+.progressBlock .arrow:before {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: 5px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 0 0 12px 0;
+  transform: rotate(-45deg);
+  background: linear-gradient(-45deg, #cccccc 50%, transparent 50%);
+}
+.progressBlock .arrow:after {
+  right: -13px;
+  background: linear-gradient(-45deg, #f7f7f7 50%, transparent 50%);
+}
+.progressBlock .arrow.actives {
+  background-color: #993399;
+  color: #ffffff;
+}
+.progressBlock .arrow.actives:after {
+  background: linear-gradient(-45deg, #993399 50%, transparent 50%);
+}
+.progressBlock .arrow.actives:before {
+  display: none;
+}
+.progressBlock .blocks {
+  float: left;
+  width: 33.3%;
+  height: 44px;
+  text-align: center;
+  font-size: 18px;
+  color: #333333;
+  font-family: 'PragmaticaCondC', arial;
+  line-height: 44px;
+  background-color: #f7f7f7;
+}
+.progressBlock .blocks:nth-of-type(1) {
+  border-radius: 10px 0 0 10px;
+}
+.progressBlock .blocks:nth-last-of-type(1) {
+  border-radius: 0 10px 10px 0;
+}
+.progressBlock .blocks.active {
+  background-color: #993399;
+  color: #ffffff;
+}
+.finishBlock .titleBlock {
+  font-family: PragmaticaCondC;
+  font-size: 18px;
+  color: #333;
+}
+.finishBlock .finishAdress {
+  float: left;
+  width: 40%;
+  padding-left: 8%;
+}
+.finishBlock .finishAdress a.btnChange {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 2px 23px;
+  height: 23px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #000;
+  margin-left: 39px;
+}
+.finishBlock .finishAdress a.btnChange:hover {
+  text-decoration: none;
+  background-color: #efefef;
+}
+.finishBlock .total {
+  float: right;
+  width: 30%;
+  padding-right: 8%;
+  font-family: PragmaticaCondC;
+}
+.finishBlock .total .stuffInCart a {
+  color: #993399;
+  font-size: 14px;
+}
+.finishBlock .total .labelItem {
+  color: #999;
+  font-size: 14px;
+  float: left;
+  width: 50%;
+}
+.finishBlock .total .valueItem {
+  color: #000;
+  font-size: 14px;
+  float: left;
+  width: 50%;
+}
+.finishBlock .total .totalMoneyAll .labelItem {
+  font-size: 17px;
+}
+.finishBlock .total .totalMoneyAll .valueItem {
+  font-size: 17px;
+}
+.finishBlock .total > div:not(.buttons):after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  margin: 12px auto;
+}
+.finishBlock .total > div:not(.buttons):nth-last-of-type(2):after {
+  display: none;
+}
+.finishAddress {
+  float: left;
+  width: 40%;
+  padding-left: 8%;
+}
+.deliveryItem {
+  overflow: hidden;
+  color: #999;
+  font-family: PragmaticaCondC;
+  margin-top: 12px;
+}
+.deliveryItem:nth-of-type(1) {
+  margin-top: 30px;
+}
+.deliveryItem .labelItem {
+  float: left;
+  width: 40%;
+  font-size: 14px;
+}
+.deliveryItem .valueItem {
+  float: left;
+  width: 60%;
+  font-size: 14px;
+}
+.accountBlock .titleBlock {
+  font-family: PragmaticaCondC;
+  font-size: 18px;
+  color: #333;
+}
+.accountBlock .accountInfo {
+  float: left;
+  width: 40%;
+}
+.accountBlock .accountInfo .finishAddress {
+  width: 100%;
+  float: none;
+  margin-top: 25px;
+}
+.accountBlock .accountInfo .finishAddress:nth-of-type(1) {
+  margin-top: 0;
+}
+.accountBlock .orderTable {
+  float: left;
+  width: 60%;
+  padding: 0 3%;
+}
+.accountBlock .orderTable .itemTable {
+  font-family: PragmaticaCondC;
+  font-size: 14px;
+}
+a.btnChange {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 2px 23px;
+  height: 23px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #000;
+  margin-left: 39px;
+  font-family: PragmaticaCondC;
+  text-decoration: none;
+}
+a.btnChange:hover {
+  text-decoration: underline;
+  background-color: #efefef;
+}
+.settingsProfile .saveBtn {
+  text-align: center;
+}
+.settingsProfile .col-3 {
+  width: 70%;
+  margin-left: 62px;
+}
+.cart .buttons {
+  float: right;
+  margin-right: 5%;
+}
+.cart .buttons a.tabs_btn {
+  margin-top: 15px;
+}
+.cart .total {
+  font-size: 14px;
+  width: 90%;
+  text-align: right;
+  margin: 15px auto 0;
+  font-weight: 700;
+  font-family: 'proxima_nova_rgregular';
+}
+.cart .cartItem {
+  width: 90%;
+  margin: 0px auto;
+  padding: 7px 7px 7px;
+  border-bottom: 1px solid #ccc;
+  font-size: 10px;
+  overflow: hidden;
+  font-family: 'proxima_nova_rgregular';
+}
+.cart .cartItem .title {
+  font-size: 1.4em;
+  width: 20%;
+  float: left;
+}
+.cart .cartItem .extra {
+  font-size: 1.4em;
+  float: left;
+  margin-left: 10px;
+  width: 15%;
+}
+.cart .cartItem .param {
+  font-size: 1.4em;
+  float: left;
+  margin-left: 10px;
+  width: 10%;
+}
+.cart .cartItem .count {
+  float: left;
+  width: 10%;
+  font-size: 1.4em;
+}
+.cart .cartItem .count input {
+  width: 50%;
+  text-align: center;
+  font-size: 1em;
+}
+.cart .cartItem .price {
+  font-size: 1.4em;
+  float: left;
+  width: 15%;
+  text-align: center;
+}
+.cart .cartItem .actions {
+  font-size: 1.4em;
+  float: left;
+  text-align: right;
+  width: 10%;
+}

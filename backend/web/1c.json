@@ -1,0 +1,45 @@
+{
+  "count": "2",
+  "product1": {
+    "article": "1",
+    "name": "Jolidon 1458",
+    "description": "Отличные колготки по приемлемой цене",
+    "price": "1001",
+    "category": "Женское белье",
+    "sizecolor": {
+      "Красный": {
+        "85C": {
+          "balance": "10",
+          "price_opt": "500"
+        }
+      },
+      "Зеленый": {
+        "90A": {
+          "balance": "500",
+          "price_opt": "10"
+        },
+        "85B": {
+          "balance": "1000",
+          "price_opt": "999"
+        }
+      }
+    }
+  },
+  "product2": {
+    "article": "2",
+    "name": "Jolidon 1458",
+    "description": "Отличные колготки по приемлемой цене",
+    "price": "1001",
+    "category": "Женское белье",
+    "size": {
+      "90A": {
+        "balance": "500",
+        "price_opt": "10"
+      },
+      "85B": {
+        "balance": "1000",
+        "price_opt": "999"
+      }
+    }
+  }
+}

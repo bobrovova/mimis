@@ -1,0 +1,376 @@
+.deliveryBlock {
+  width: 50%;
+  padding: 0 3%;
+  float: left;
+}
+.deliveryBlock .select > div,
+.paymentBlock .select > div {
+  margin-top: 10px;
+}
+.deliveryBlock .select input[type="radio"] + label::before,
+.paymentBlock .select input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  float: left;
+  height: 18px;
+  width: 18px;
+  margin: 0 5px 0 0;
+  background-image: url("../images/unchecked.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.deliveryBlock .select input[type="radio"]:checked + label::before,
+.paymentBlock .select input[type="radio"]:checked + label::before {
+  background-image: url("../images/checked.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.deliveryBlock .select input[type="radio"]:disabled + label::before,
+.paymentBlock .select input[type="radio"]:disabled + label::before {
+  background-image: url("../images/unchecked.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.deliveryBlock .select label,
+.paymentBlock .select label {
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  color: #999999;
+  font-weight: 300;
+}
+.personBlock {
+  width: 50%;
+  padding: 0 3%;
+  float: left;
+}
+.ordering .titleBlock {
+  font-family: 'PragmaticaCondC', arial;
+  color: #333333;
+  font-size: 18px;
+  text-align: center;
+}
+.ordering .form .row {
+  margin-top: 7px;
+}
+.ordering .form .row .labelForm {
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  color: #999999;
+  font-weight: 300;
+}
+.ordering .form .row .input input {
+  height: 28px;
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  line-height: 29px;
+}
+.ordering .col-3 {
+  margin-top: 20px;
+  float: left;
+  width: 33.3%;
+}
+.ordering .col-3 .labelForm {
+  width: 16%;
+}
+.ordering .col-3.details.form .row {
+  width: 33.3%;
+  float: left;
+}
+.ordering .col-3.details.form .row .labelForm {
+  text-align: right;
+  width: 70%;
+  padding-right: 5%;
+}
+.ordering .col-3.details.form .row .input {
+  text-align: right;
+  width: 30%;
+}
+.ordering .col-3.details.form .row .input input {
+  width: 100%;
+  padding: 0 2px;
+  text-align: center;
+}
+.separate {
+  border-top: 2px solid #ccc;
+  width: 96%;
+  margin: 20px auto;
+}
+.address {
+  width: 94%;
+  margin: 0 auto;
+}
+.address .titleBlock {
+  text-align: left;
+  padding-left: 15px;
+}
+a.btnService {
+  margin-top: 40px;
+  border: 1px solid #cccccc;
+  background-color: #ff6633;
+  padding: 14px 55px;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+a.btnService:hover {
+  background-color: #FF5921;
+}
+.btnService {
+  margin-top: 40px;
+  border: 1px solid #cccccc;
+  background-color: #ff6633;
+  padding: 14px 55px;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btnService:hover {
+  background-color: #FF5921;
+}
+.paymentBlock {
+  width: 94%;
+  padding: 0 3%;
+}
+.paymentBlock .titleBlock {
+  text-align: left;
+}
+.paymentBlock .select input[type="radio"] + label::before {
+  margin-top: 6px;
+}
+.paymentBlock label .big {
+  font-size: 18px;
+  color: #000;
+  font-family: 'PragmaticaCondC', arial;
+}
+.paymentBlock label .small {
+  font-size: 14px;
+  font-family: 'PragmaticaCondC', arial;
+  color: #999999;
+  font-weight: 300;
+  padding-left: 23px;
+}
+.progressBlock {
+  width: 90%;
+  margin: 0 auto 30px;
+}
+.progressBlock .arrow {
+  width: 32.9%;
+  height: 37px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  color: #333333;
+  font-family: 'PragmaticaCondC', arial;
+  line-height: 36px;
+  background-color: #f7f7f7;
+  text-align: center;
+  font-size: 18px;
+  border-left: 1px solid #ccc;
+}
+.progressBlock .arrow:nth-of-type(n+2) {
+  margin-left: -4px;
+}
+.progressBlock .arrow:nth-of-type(1) {
+  z-index: 3;
+  border-left: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+.progressBlock .arrow:nth-of-type(2) {
+  z-index: 2;
+}
+.progressBlock .arrow:nth-of-type(3) {
+  z-index: 1;
+}
+.progressBlock .arrow:after,
+.progressBlock .arrow:before {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: 5px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 0 0 12px 0;
+  transform: rotate(-45deg);
+  background: linear-gradient(-45deg, #cccccc 50%, transparent 50%);
+}
+.progressBlock .arrow:after {
+  right: -13px;
+  background: linear-gradient(-45deg, #f7f7f7 50%, transparent 50%);
+}
+.progressBlock .arrow.actives {
+  background-color: #993399;
+  color: #ffffff;
+}
+.progressBlock .arrow.actives:after {
+  background: linear-gradient(-45deg, #993399 50%, transparent 50%);
+}
+.progressBlock .arrow.actives:before {
+  display: none;
+}
+.progressBlock .blocks {
+  float: left;
+  width: 33.3%;
+  height: 44px;
+  text-align: center;
+  font-size: 18px;
+  color: #333333;
+  font-family: 'PragmaticaCondC', arial;
+  line-height: 44px;
+  background-color: #f7f7f7;
+}
+.progressBlock .blocks:nth-of-type(1) {
+  border-radius: 10px 0 0 10px;
+}
+.progressBlock .blocks:nth-last-of-type(1) {
+  border-radius: 0 10px 10px 0;
+}
+.progressBlock .blocks.active {
+  background-color: #993399;
+  color: #ffffff;
+}
+.finishBlock .titleBlock {
+  font-family: PragmaticaCondC;
+  font-size: 18px;
+  color: #333;
+}
+.finishBlock .finishAdress {
+  float: left;
+  width: 40%;
+  padding-left: 8%;
+}
+.finishBlock .finishAdress a.btnChange {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 2px 23px;
+  height: 23px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #000;
+  margin-left: 39px;
+}
+.finishBlock .finishAdress a.btnChange:hover {
+  text-decoration: none;
+  background-color: #efefef;
+}
+.finishBlock .total {
+  float: right;
+  width: 30%;
+  padding-right: 8%;
+  font-family: PragmaticaCondC;
+}
+.finishBlock .total .stuffInCart a {
+  color: #993399;
+  font-size: 14px;
+}
+.finishBlock .total .labelItem {
+  color: #999;
+  font-size: 14px;
+  float: left;
+  width: 50%;
+}
+.finishBlock .total .valueItem {
+  color: #000;
+  font-size: 14px;
+  float: left;
+  width: 50%;
+}
+.finishBlock .total .totalMoneyAll .labelItem {
+  font-size: 17px;
+}
+.finishBlock .total .totalMoneyAll .valueItem {
+  font-size: 17px;
+}
+.finishBlock .total > div:not(.buttons):after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  margin: 12px auto;
+}
+.finishBlock .total > div:not(.buttons):nth-last-of-type(2):after {
+  display: none;
+}
+.finishAddress {
+  float: left;
+  width: 40%;
+  padding-left: 8%;
+}
+.deliveryItem {
+  overflow: hidden;
+  color: #999;
+  font-family: PragmaticaCondC;
+  margin-top: 12px;
+}
+.deliveryItem:nth-of-type(1) {
+  margin-top: 30px;
+}
+.deliveryItem .labelItem {
+  float: left;
+  width: 40%;
+  font-size: 14px;
+}
+.deliveryItem .valueItem {
+  float: left;
+  width: 60%;
+  font-size: 14px;
+}
+.accountBlock .titleBlock {
+  font-family: PragmaticaCondC;
+  font-size: 18px;
+  color: #333;
+}
+.accountBlock .accountInfo {
+  float: left;
+  width: 40%;
+}
+.accountBlock .accountInfo .finishAddress {
+  width: 100%;
+  float: none;
+  margin-top: 25px;
+}
+.accountBlock .accountInfo .finishAddress:nth-of-type(1) {
+  margin-top: 0;
+}
+.accountBlock .orderTable {
+  float: left;
+  width: 60%;
+  padding: 0 3%;
+}
+.accountBlock .orderTable .itemTable {
+  font-family: PragmaticaCondC;
+  font-size: 14px;
+}
+a.btnChange {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 2px 23px;
+  height: 23px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #000;
+  margin-left: 39px;
+  font-family: PragmaticaCondC;
+  text-decoration: none;
+}
+a.btnChange:hover {
+  text-decoration: underline;
+  background-color: #efefef;
+}
+.settingsProfile .saveBtn {
+  text-align: center;
+}
+.settingsProfile .col-3 {
+  width: 70%;
+  margin-left: 62px;
+}

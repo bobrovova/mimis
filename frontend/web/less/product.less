@@ -1,0 +1,126 @@
+.productBlock {
+  overflow: hidden;
+  margin-top: 20px;
+  .images {
+    float: left;
+    width: 38%;
+    padding: 0 5% 0 2%;
+    img {
+      width: 100%;
+    }
+    .miniSlider {
+      margin-top: 8px;
+      .miniImg {
+        margin: 0 2px;
+        border: 1px solid #e8e8e8;
+        outline: none;
+        &.slick-current {
+          border: 1px solid #ac2929;
+        }
+      }
+    }
+  }
+  .info {
+    float: left;
+    width: 52%;
+    padding-right: 3%;
+    font-family: 'PragmaticaCondC', arial;
+    .params {
+      margin-top: 10px;
+    }
+    .title {
+      font-size: 30px;
+      color: #000;
+      margin-bottom: 15px;
+      line-height: 1;
+      &:after {
+        display: block;
+        content: '';
+        width: 20%;
+        border-top: 1px solid #c8c8c8;
+        margin-top: 10px;
+      }
+    }
+    .label {
+      font-size: 14px;
+      color: #000;
+      font-family: 'proxima_nova_rgregular';
+      padding: 0;
+      font-weight: 300;
+    }
+    .price {
+      margin-bottom: 15px;
+      &:after {
+        display: block;
+        content: '';
+        width: 20%;
+        border-top: 1px solid #c8c8c8;
+        margin-top: 10px;
+      }
+      .currentPrice {
+        font-size: 40px;
+        line-height: 1;
+      }
+    }
+    .descBlock {
+      margin-top: 15px;
+      .label {
+        text-transform: uppercase;
+      }
+      .text {
+        font-size: 14px;
+        color: #000;
+        margin-top: 10px;
+      }
+    }
+    .addToCart {
+      margin-top: 15px;
+    }
+    .number {
+      margin-top: 10px;
+      input[type=text] {
+        margin-top: 10px;
+        height: 32px;
+        text-align: center;
+        font-size: 16px;
+        width: 65px;
+      }
+    }
+    .selectParams {
+      margin-top: 5px;
+      &.colors {
+        ul {
+          li {
+            text-transform: capitalize;
+          }
+        }
+      }
+      ul {
+        li {
+          display: inline-block;
+          height: 29px;
+          min-width: 29px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          text-transform: uppercase;
+          font-size: 17px;
+          text-align: center;
+          line-height: 29px;
+          margin: 0 10px;
+          a {
+            color: #ac2929;
+            text-decoration: none;
+            cursor: pointer;
+            &.active {
+              border-bottom: 1px dashed #ac2929;
+            }
+            &:hover {
+              border-bottom: 1px dashed #ac2929;
+            }
+          }
+        }
+      }
+    }
+  }
+}
