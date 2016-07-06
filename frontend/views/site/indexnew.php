@@ -53,8 +53,8 @@ use yii\helpers\Url;
 
             <ul class="tabs">
                 <li class="tabs_tab"><?php echo $firstBlock['name']; ?></li>
-                <li class="tabs_tab">Вторая вкладка</li>
-                <li class="tabs_tab">Третья вкладка</li>
+                <li class="tabs_tab"><?php echo $secondBlock['name']; ?></li>
+                <li class="tabs_tab"><?php echo $thirdBlock['name']; ?></li>
             </ul>
 
             <div class="tabs_content">
@@ -75,98 +75,33 @@ use yii\helpers\Url;
                 </div>
 
                 <div class="tabs_content_wrap">
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-3.jpg" alt="">
+                    <?php foreach ($secondBlock['items'] as $item) : ?>
+                        <div class="tabs_item">
+                            <div class="tabs_img">
+                                <img src="images/items/<?php echo $item->thumb; ?>" alt="">
+                            </div>
+                            <div class="tabs_descrip">
+                                <span><?php $item->name; ?></span>
+                            </div>
+                            <span class="tabs_price"><?php echo $item->price; ?> <img src="images/rub.png" alt=""></span>
+                            <a href="#" class="tabs_btn">Купить</a>
                         </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-1.jpg" alt="">
-                        </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-4.jpg" alt="">
-                        </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-2.jpg" alt="">
-                        </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
 
                 <div class="tabs_content_wrap">
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-4.jpg" alt="">
+                    <?php foreach ($thirdBlock['items'] as $item) : ?>
+                        <div class="tabs_item">
+                            <div class="tabs_img">
+                                <img src="images/items/<?php echo $item->thumb; ?>" alt="">
+                            </div>
+                            <div class="tabs_descrip">
+                                <span><?php $item->name; ?></span>
+                            </div>
+                            <span class="tabs_price"><?php echo $item->price; ?> <img src="images/rub.png" alt=""></span>
+                            <a href="#" class="tabs_btn">Купить</a>
                         </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-2.jpg" alt="">
-                        </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-1.jpg" alt="">
-                        </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
-                    <div class="tabs_item">
-                        <div class="tabs_img">
-                            <img src="images/photo-3.jpg" alt="">
-                        </div>
-                        <div class="tabs_descrip">
-                            <span>Tiana B Man's Floral</span>
-                            <span>Printed Color </span>
-                        </div>
-                        <span class="tabs_price">6500 <img src="images/rub.png" alt=""></span>
-                        <a href="#" class="tabs_btn">В корзину</a>
-                    </div>
-
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

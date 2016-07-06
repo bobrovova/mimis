@@ -97,27 +97,29 @@ class SiteController extends Controller
 
         $sql = "SELECT items.*, iti.small_image as thumb FROM items
                 LEFT JOIN images_to_items iti ON items.id = iti.item_id
-                WHERE category_id = 2 AND iti.isThumb = 1 LIMIT 0,4";
+                WHERE category_id = 3 AND iti.isThumb = 1 LIMIT 0,4";
         $products = Items::findBySql($sql)->all();
 
         $secondBlock = [
-            'name' => 'Нижнее белье',
+            'name' => 'Купальники',
             'items' => $products
         ];
 
         $sql = "SELECT items.*, iti.small_image as thumb FROM items
                 LEFT JOIN images_to_items iti ON items.id = iti.item_id
-                WHERE category_id = 2 AND iti.isThumb = 1 LIMIT 0,4";
+                WHERE category_id = 1 AND iti.isThumb = 1 LIMIT 0,4";
         $products = Items::findBySql($sql)->all();
 
         $thirdBlock = [
-            'name' => 'Нижнее белье',
+            'name' => 'Домашняя одежда',
             'items' => $products
         ];
 
         return $this->render('indexnew', [
             'categories' => $categories,
-            'firstBlock' => $firstBlock
+            'firstBlock' => $firstBlock,
+            'secondBlock' => $secondBlock,
+            'thirdBlock' => $thirdBlock
         ]);
     }
 
