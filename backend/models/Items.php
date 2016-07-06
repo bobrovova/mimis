@@ -90,7 +90,7 @@ class Items extends \yii\db\ActiveRecord
         } else {
             $newItem = new Items();
             $newItem->name = $product->name;
-            $newItem->price = $product->price;
+            $newItem->price_opt = $product->price;
             $newItem->article = $product->article;
             $newItem->description = $product->description;
             $newItem->online = 1;
