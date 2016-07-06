@@ -93,6 +93,7 @@ class Items extends \yii\db\ActiveRecord
             $newItem->price = $product->price;
             $newItem->article = $product->article;
             $newItem->description = $product->description;
+            $newItem->online = 1;
             $nextIdProduct = Items::getNextIdProduct();
             $category = Category::getCategoryByName($product->category);
             if($category != null){
