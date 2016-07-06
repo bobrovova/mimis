@@ -27,7 +27,7 @@ use yii\helpers\Url;
             <?php
                 endif;
             ?>
-            <form class="form" method="post" action="index.php?r=site/login">
+            <form class="form" method="post" action="<?=Url::to(['site/login'])?>">
                 <div class="row">
                     <div class="labelForm">E-mail</div>
                     <div class="input"><input type="text" name="LoginForm[email]"></div>

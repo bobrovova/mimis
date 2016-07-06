@@ -26,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <input type="password" class="form-control" placeholder="Password" required="" name="LoginForm[password]"/>
               </div>
               <div>
+                <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                 <input class="btn btn-default submit" type="submit" value="Log in">
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>

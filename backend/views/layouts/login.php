@@ -12,8 +12,8 @@ use common\widgets\Alert;
 
 yiister\gentelella\assets\Asset::register($this);
 $this->registerJsFile("js/jquery.min.js", ['position' => \yii\web\View::POS_HEAD]);
+$this->beginPage();
 ?>
-<?php $this->beginPage(); ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
@@ -30,10 +30,10 @@ $this->registerJsFile("js/jquery.min.js", ['position' => \yii\web\View::POS_HEAD
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-  <body class="login">
-	<?= $content ?>
-	<?php $this->endBody(); ?>
-	</body>
+    <body class="login">
+        <?= $content ?>
+        <?php $this->endBody(); ?>
+    </body>
 </html>
 <?php $this->endPage(); ?>
 
