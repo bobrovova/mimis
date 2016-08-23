@@ -161,3 +161,10 @@ a.desc:after {
     float: left;
     width: 62%;
 }
+
+.miniImg .glyphicon {
+    position: absolute;
+    cursor: pointer;
+    font-size: 16px;
+    color: red;
+}

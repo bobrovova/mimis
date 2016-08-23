@@ -86,7 +86,59 @@ class Items extends \yii\db\ActiveRecord
     public static function loadProductFrom1c($product){
         $sqlProduct = "SELECT id FROM items WHERE article = $product->article";
         if(($item = Items::findBySql($sqlProduct)->one()) != null){
-            echo "sdf";
+            $item->name = $product->name;
+            $item->price = $product->price;
+            $item->price_opt = $product->price;
+            $item->article = $product->article;
+            $item->description = $product->description;
+            $item->online = 1;
+            $item->materials = '';
+            $category = Category::getCategoryByName($product->category);
+            
+            if($category != null){
+                $item->category_id = $category->id;
+            } else {
+                throw new Exception("Неправильное название категории!");
+            }
+            if(empty($product->sizecolor) && empty($product->size)){
+                if(!$item->save()){
+                    var_dump($item->getErrors());
+                } else {
+                    echo "Продукт ".$product->article." сохранен";
+                }
+            } else if(!empty($product->size)){
+                if(!$item->save()){
+                    var_dump($item->getErrors());
+                } else {
+                    $sizes = json_decode(json_encode($product->size), true);
+                    $i = 0;
+                    foreach($sizes as $size_key => $size_params){
+                        ExtraVariations::setValue($item->id, $size_key, $size_params['price_opt'], $i);
+                        $i++;
+                    }
+                    echo "Продукт ".$product->article." и его размеры сохранены";
+                }
+            } else if(!empty($product->sizecolor)){
+                $sizecolors = json_decode(json_encode($product->sizecolor), true);
+                $rank = 0;
+                foreach($sizecolors as $color_title => $color_params){
+                    $clone = new Items();
+                    $clone->attributes = $item->attributes;
+                    $clone->color = $color_title;
+                    $clone->color_rank = $rank;
+                    if(!$clone->save()){
+                        var_dump($clone->getErrors());
+                    } else {
+                        $i = 0;
+                        foreach($color_params as $size_key => $size_params){
+                            ExtraVariations::setValue($clone->id, $size_key, $size_params['price_opt'], $i);
+                            $i++;
+                        }
+                        echo "Продукт ".$product->article." и его размеры сохранены";
+                    }
+                    $rank++;
+                }
+            }
         } else {
             $newItem = new Items();
             $newItem->name = $product->name;
@@ -95,6 +147,7 @@ class Items extends \yii\db\ActiveRecord
             $newItem->article = $product->article;
             $newItem->description = $product->description;
             $newItem->online = 1;
+            $newItem->materials = '';
             $nextIdProduct = Items::getNextIdProduct();
             $category = Category::getCategoryByName($product->category);
             if($category != null){
@@ -114,8 +167,10 @@ class Items extends \yii\db\ActiveRecord
                     var_dump($newItem->getErrors());
                 } else {
                     $sizes = json_decode(json_encode($product->size), true);
+                    $i = 0;
                     foreach($sizes as $size_key => $size_params){
-                        ExtraVariations::setValue($newItem->id, $size_key, $size_params['price_opt']);
+                        ExtraVariations::setValue($newItem->id, $size_key, $size_params['price_opt'], $i);
+                        $i++;
                     }
                     echo "Продукт ".$product->article." и его размеры сохранены";
                 }
@@ -130,8 +185,10 @@ class Items extends \yii\db\ActiveRecord
                     if(!$clone->save()){
                         var_dump($clone->getErrors());
                     } else {
+                        $i = 0;
                         foreach($color_params as $size_key => $size_params){
-                            ExtraVariations::setValue($clone->id, $size_key, $size_params['price_opt']);
+                            ExtraVariations::setValue($clone->id, $size_key, $size_params['price_opt'], $i);
+                            $i++;
                         }
                         echo "Продукт ".$product->article." и его размеры сохранены";
                     }

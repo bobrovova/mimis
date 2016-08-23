@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form method="post" action="/index.php?r=site/login">
+            <form method="post" action="index.php?r=site/login">
               <h1>Вход</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" name="LoginForm[email]"/>

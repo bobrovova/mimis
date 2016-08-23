@@ -49,7 +49,7 @@ class ExtraVariations extends \yii\db\ActiveRecord
         ];
     }
 
-    public static function setValue($item_id, $name_value, $opt_price){
+    public static function setValue($item_id, $name_value, $opt_price, $rank){
         echo $item_id.$name_value.$opt_price;
         $variant = ExtraVariations::findOne([
             'value' => $name_value,
@@ -64,6 +64,7 @@ class ExtraVariations extends \yii\db\ActiveRecord
             $variant->value = $name_value;
             $variant->opt_price = $opt_price;
         }
+        $variant->rank = $rank;
 
         if(!$variant->save()){
             echo "Ошибка записи характеристики товара";

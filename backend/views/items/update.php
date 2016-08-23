@@ -44,7 +44,8 @@ $this->params['breadcrumbs'][] = 'Update';
                                 <?php
                                 foreach($model['images'] as $image){
                                     ?>
-                                    <div class="img">
+                                    <div class="img"
+                                         data-image-id="<?=$image['id']?>">
                                         <img src="../../frontend/web/images/items/<?=$image['big_image'];?>">
                                     </div>
                                     <?php
@@ -56,6 +57,9 @@ $this->params['breadcrumbs'][] = 'Update';
                                 foreach($model['images'] as $image){
                                     ?>
                                     <div class="miniImg">
+                                        <span class="glyphicon glyphicon-remove"
+                                              aria-hidden="true"
+                                              data-image-id="<?=$image['id']?>"></span>
                                         <img src="../../frontend/web/images/items/<?=$image['small_image'];?>">
                                     </div>
                                     <?php
@@ -95,5 +99,6 @@ $js = "$(document).ready(function(){
     });";
 $this->registerJsFile("js/slick.js", ['position' => \yii\web\View::POS_BEGIN]);
 $this->registerJsFile("js/dropzone.js", ['position' => \yii\web\View::POS_BEGIN]);
+$this->registerJsFile("js/main.js", ['position' => \yii\web\View::POS_BEGIN]);
 $this->registerJs($js, \yii\web\View::POS_END);
 ?>
