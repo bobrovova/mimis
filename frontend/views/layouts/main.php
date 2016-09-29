@@ -57,7 +57,7 @@ if(!empty($_COOKIE['cart'])){
 <header class="header">
     <div class="header_wrap">
         <div class="b-phone">
-            <span class="phone">8 800 2000 600</span>
+            <span class="phone">+7 (383) 284-90-60</span>
         </div>
         <a href="<?=Url::to(['site/index'])?>" class="b-logo">
             <img src="images/logo.png" alt="Логотип" class="b-logo_img">
@@ -95,13 +95,11 @@ if(!empty($_COOKIE['cart'])){
 <footer class="footer">
     <div class="footer_wrap">
         <div class="footer_list">
-            <h5 class="footer_h5">ПОДРОБНЕЕ ОБ MISS&MISTER</h5>
+            <h5 class="footer_h5">ТЕЛЕФОНЫ</h5>
             <ul>
-                <li class="footer_item"><a href="#" class="footer_link">Корпоративная ответственность</a></li>
-                <li class="footer_item"><a href="#" class="footer_link">Вакансии в Miss&Mister</a></li>
-                <li class="footer_item"><a href="#" class="footer_link">Инвесторам</a></li>
-                <li class="footer_item"><a href="#" class="footer_link">Партнерская программа</a></li>
-                <li class="footer_item"><a href="#" class="footer_link">As Seen On Screen</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">+7 (383) 284-90-60</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">+7 913 924 0100</a></li>
+                <li class="footer_item"><a href="#" class="footer_link">+7 923 224 8401</a></li>
             </ul>
         </div>
         <div class="footer_list">

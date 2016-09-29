@@ -8,6 +8,7 @@ use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use app\models\Category;
 use app\models\Items;
+use app\models\Orders;
 use app\models\ExtraVariations;
 
 /**
@@ -29,7 +30,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'dashboard'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -131,5 +132,22 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function actionDashboard()
+    {
+        $data['allOrders'] = Orders::find()->count();
+        $data['todayOrders'] = Orders::find()
+            ->where("date >= CURDATE()")
+            ->count();
+        $data['allNotProcessedOrders'] = Orders::find()
+            ->where("status = 0")
+            ->count();
+        $data['todayNotProcessedOrders'] = Orders::find()
+            ->where("date >= CURDATE() AND status = 0")
+            ->count();
+        return $this->render('dashboard', [
+            'data' => $data,
+        ]);
     }
 }

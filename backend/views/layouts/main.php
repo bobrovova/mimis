@@ -47,9 +47,6 @@ $this->registerJsFile("js/jquery.min.js", ['position' => \yii\web\View::POS_HEAD
 
                 <!-- menu prile quick info -->
                 <div class="profile">
-                    <div class="profile_pic">
-                        <img src="http://placehold.it/128x128" alt="..." class="img-circle profile_img">
-                    </div>
                     <div class="profile_info">
                         <span>Добро пожаловать,</span>
                         <h2>Сотрудник</h2>

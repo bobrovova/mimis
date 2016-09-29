@@ -84,17 +84,16 @@ class Items extends \yii\db\ActiveRecord
 
 
     public static function loadProductFrom1c($product){
-        $sqlProduct = "SELECT id FROM items WHERE article = $product->article";
+        $sqlProduct = "SELECT id FROM items WHERE article = '".$product->article."'";
         if(($item = Items::findBySql($sqlProduct)->one()) != null){
             $item->name = $product->name;
-            $item->price = $product->price;
-            $item->price_opt = $product->price;
+            $item->price = (int) $product->price;
+            $item->price_opt = (int) $product->price;
             $item->article = $product->article;
             $item->description = $product->description;
             $item->online = 1;
             $item->materials = '';
             $category = Category::getCategoryByName($product->category);
-            
             if($category != null){
                 $item->category_id = $category->id;
             } else {
@@ -142,8 +141,8 @@ class Items extends \yii\db\ActiveRecord
         } else {
             $newItem = new Items();
             $newItem->name = $product->name;
-            $newItem->price = $product->price;
-            $newItem->price_opt = $product->price;
+            $newItem->price = (int) $product->price;
+            $newItem->price_opt = (int) $product->price;
             $newItem->article = $product->article;
             $newItem->description = $product->description;
             $newItem->online = 1;

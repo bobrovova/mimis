@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = 'Update';
                                     ?>
                                     <div class="img"
                                          data-image-id="<?=$image['id']?>">
-                                        <img src="../../frontend/web/images/items/<?=$image['big_image'];?>">
+                                        <img src="http://missmister.ru/images/items/<?=$image['big_image'];?>">
                                     </div>
                                     <?php
                                 }
@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = 'Update';
                                         <span class="glyphicon glyphicon-remove"
                                               aria-hidden="true"
                                               data-image-id="<?=$image['id']?>"></span>
-                                        <img src="../../frontend/web/images/items/<?=$image['small_image'];?>">
+                                        <img src="http://missmister.ru/images/items/<?=$image['small_image'];?>">
                                     </div>
                                     <?php
                                 }
