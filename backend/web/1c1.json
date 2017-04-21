@@ -3,8 +3,8 @@
   "product1": {
     "article": "fdc502f9-1e77-11e6-872c-0022154a2410",
     "name": "1004 Dolika Комплект (Халат и сорочка)",
-    "description": "",
-    "price": "1200,00",
+    "description": "1",
+    "price": "1400,00",
     "category": "Нижнее белье",
     "params": {
 		"": ""
@@ -42,9 +42,9 @@
 },
   "product2": {
     "article": "fdc5031c-1e77-11e6-872c-0022154a2410",
-    "name": "1005 Dolika Комплект (Халат и сорочка)",
-    "description": "",
-    "price": "1200,00",
+    "name": "1005 Dolika1 Комплект (Халат и сорочка)",
+    "description": "2",
+    "price": "1350,00",
     "category": "Нижнее белье",
     "params": {
 		"": ""

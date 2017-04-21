@@ -168,3 +168,8 @@ a.desc:after {
     font-size: 16px;
     color: red;
 }
+
+.tile_stats_count .count {
+    font-size: 40px;
+    font-weight: 600;
+}

@@ -40,7 +40,7 @@ class Items extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'price', 'category_id', 'article', 'description'], 'required'],
+            [['name', 'price', 'category_id', 'article'], 'required'],
             [['online', 'price', 'category_id', 'price_opt', 'color_rank', 'id_product'], 'integer'],
             [['description', 'materials', 'color'], 'string'],
             [['name', 'article'], 'string', 'max' => 250]
@@ -84,7 +84,7 @@ class Items extends \yii\db\ActiveRecord
 
 
     public static function loadProductFrom1c($product){
-        $sqlProduct = "SELECT id FROM items WHERE article = '".$product->article."'";
+        $sqlProduct = "SELECT * FROM items WHERE article = '".$product->article."'";
         if(($item = Items::findBySql($sqlProduct)->one()) != null){
             $item->name = $product->name;
             $item->price = (int) $product->price;
@@ -120,11 +120,17 @@ class Items extends \yii\db\ActiveRecord
             } else if(!empty($product->sizecolor)){
                 $sizecolors = json_decode(json_encode($product->sizecolor), true);
                 $rank = 0;
+                
                 foreach($sizecolors as $color_title => $color_params){
-                    $clone = new Items();
+                    $clone = Items::findOne(['color' => $color_title]);
+                    if ($clone == null){
+                        $clone = new Items();
+                    }
                     $clone->attributes = $item->attributes;
                     $clone->color = $color_title;
                     $clone->color_rank = $rank;
+                    $clone->id_product = $item->id_product;
+                    $clone->changed = 1;
                     if(!$clone->save()){
                         var_dump($clone->getErrors());
                     } else {
@@ -137,6 +143,11 @@ class Items extends \yii\db\ActiveRecord
                     }
                     $rank++;
                 }
+
+                //delete old items
+                Items::deleteAll(['id_product' => $item->id_product, 'changed' => 0]);
+
+                Items::updateAllCounters(['changed' => 0], ['id_product' => $item->id_product]);                
             }
         } else {
             $newItem = new Items();
