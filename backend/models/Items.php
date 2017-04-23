@@ -17,6 +17,7 @@ use yii\base\Exception;
  * @property string $article
  * @property string $description
  * @property string $materials
+ * @property integer $id_product
  */
 class Items extends \yii\db\ActiveRecord
 {
@@ -40,7 +41,7 @@ class Items extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'price', 'category_id', 'article'], 'required'],
+            [['name', 'price', 'category_id', 'article', 'id_product', 'description'], 'required'],
             [['online', 'price', 'category_id', 'price_opt', 'color_rank', 'id_product'], 'integer'],
             [['description', 'materials', 'color'], 'string'],
             [['name', 'article'], 'string', 'max' => 250]
@@ -84,12 +85,15 @@ class Items extends \yii\db\ActiveRecord
 
 
     public static function loadProductFrom1c($product){
-        $sqlProduct = "SELECT * FROM items WHERE article = '".$product->article."'";
+        $sqlProduct = "SELECT id FROM items WHERE article='".$product->article."'";
         if(($item = Items::findBySql($sqlProduct)->one()) != null){
             $item->name = $product->name;
-            $item->price = (int) $product->price;
-            $item->price_opt = (int) $product->price;
+            $item->price = intval($product->price);
+            $item->price_opt = intval($product->price);
             $item->article = $product->article;
+            if (empty($product->description)){
+                $product->description = "Нет описания";
+            }
             $item->description = $product->description;
             $item->online = 1;
             $item->materials = '';
@@ -120,17 +124,11 @@ class Items extends \yii\db\ActiveRecord
             } else if(!empty($product->sizecolor)){
                 $sizecolors = json_decode(json_encode($product->sizecolor), true);
                 $rank = 0;
-                
                 foreach($sizecolors as $color_title => $color_params){
-                    $clone = Items::findOne(['color' => $color_title]);
-                    if ($clone == null){
-                        $clone = new Items();
-                    }
+                    $clone = new Items();
                     $clone->attributes = $item->attributes;
                     $clone->color = $color_title;
                     $clone->color_rank = $rank;
-                    $clone->id_product = $item->id_product;
-                    $clone->changed = 1;
                     if(!$clone->save()){
                         var_dump($clone->getErrors());
                     } else {
@@ -143,18 +141,16 @@ class Items extends \yii\db\ActiveRecord
                     }
                     $rank++;
                 }
-
-                //delete old items
-                Items::deleteAll(['id_product' => $item->id_product, 'changed' => 0]);
-
-                Items::updateAllCounters(['changed' => 0], ['id_product' => $item->id_product]);                
             }
         } else {
             $newItem = new Items();
             $newItem->name = $product->name;
-            $newItem->price = (int) $product->price;
-            $newItem->price_opt = (int) $product->price;
+            $newItem->price = intval($product->price);
+            $newItem->price_opt = intval($product->price);
             $newItem->article = $product->article;
+            if (empty($product->description)){
+                $product->description = "Нет описания";
+            }
             $newItem->description = $product->description;
             $newItem->online = 1;
             $newItem->materials = '';

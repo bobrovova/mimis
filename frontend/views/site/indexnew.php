@@ -63,13 +63,13 @@ use yii\helpers\Url;
                     <?php foreach ($firstBlock['items'] as $item) : ?>
                         <div class="tabs_item">
                             <div class="tabs_img">
-                                <img src="images/items/<?php echo $item->thumb; ?>" alt="">
+                                <img src="<?php echo Yii::$app->params['itemsImagesPath'].$item->thumb; ?>" alt="">
                             </div>
                             <div class="tabs_descrip">
                                 <span><?php $item->name; ?></span>
                             </div>
                             <span class="tabs_price"><?php echo $item->price; ?> <img src="images/rub.png" alt=""></span>
-                            <a href="#" class="tabs_btn">Купить</a>
+                            <a href="<?=Url::to(["catalog/item", 'id' => $item->id])?>" class="tabs_btn">Купить</a>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -78,13 +78,13 @@ use yii\helpers\Url;
                     <?php foreach ($secondBlock['items'] as $item) : ?>
                         <div class="tabs_item">
                             <div class="tabs_img">
-                                <img src="images/items/<?php echo $item->thumb; ?>" alt="">
+                                <img src="<?php echo Yii::$app->params['itemsImagesPath'].$item->thumb; ?>" alt="">
                             </div>
                             <div class="tabs_descrip">
                                 <span><?php $item->name; ?></span>
                             </div>
                             <span class="tabs_price"><?php echo $item->price; ?> <img src="images/rub.png" alt=""></span>
-                            <a href="#" class="tabs_btn">Купить</a>
+                            <a href="<?=Url::to(["catalog/item", 'id' => $item->id])?>" class="tabs_btn">Купить</a>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -93,13 +93,13 @@ use yii\helpers\Url;
                     <?php foreach ($thirdBlock['items'] as $item) : ?>
                         <div class="tabs_item">
                             <div class="tabs_img">
-                                <img src="images/items/<?php echo $item->thumb; ?>" alt="">
+                                <img src="<?php echo Yii::$app->params['itemsImagesPath'].$item->thumb; ?>" alt="">
                             </div>
                             <div class="tabs_descrip">
                                 <span><?php $item->name; ?></span>
                             </div>
                             <span class="tabs_price"><?php echo $item->price; ?> <img src="images/rub.png" alt=""></span>
-                            <a href="#" class="tabs_btn">Купить</a>
+                            <a href="<?=Url::to(["catalog/item", 'id' => $item->id])?>" class="tabs_btn">Купить</a>
                         </div>
                     <?php endforeach; ?>
                 </div>

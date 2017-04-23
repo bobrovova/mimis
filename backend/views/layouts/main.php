@@ -12,6 +12,8 @@ use yii\widgets\Breadcrumbs;
 use common\widgets\Alert;
 
 yiister\gentelella\assets\Asset::register($this);
+AppAsset::register($this);
+
 $this->registerJsFile("js/jquery.min.js", ['position' => \yii\web\View::POS_HEAD]);
 ?>
 <?php $this->beginPage(); ?>
@@ -66,11 +68,27 @@ $this->registerJsFile("js/jquery.min.js", ['position' => \yii\web\View::POS_HEAD
                             [
                                 "items" => [
                                     ["label" => "Главная", "url" => ["site/dashboard"], "icon" => "home"],
-                                    ["label" => "Товары", "url" => ["site/index"], "icon" => "files-o"],
+                                    [
+                                        "label" => "Товары",
+                                        "url" => ["site/index"],
+                                        "icon" => "files-o",
+                                    ],
                                     [
                                         "label" => "Заказы",
                                         "url" => ["orders/index"],
                                         "icon" => "table",
+                                    ],
+                                    [
+                                        "label" => "Сервис",
+                                        "url" => "#",
+                                        "icon" => "cogs",
+                                        "items" => [
+                                            [
+                                                "label" => "Загрузить товар на сайт",
+                                                "icon" => "exchange",
+                                                "url" => ["service/load-products"]
+                                            ]
+                                        ]
                                     ]
                                 ],
                             ]

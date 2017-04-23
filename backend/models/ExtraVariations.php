@@ -50,7 +50,6 @@ class ExtraVariations extends \yii\db\ActiveRecord
     }
 
     public static function setValue($item_id, $name_value, $opt_price, $rank){
-        echo $item_id.$name_value.$opt_price;
         $variant = ExtraVariations::findOne([
             'value' => $name_value,
             'item_id' => $item_id

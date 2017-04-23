@@ -24,7 +24,7 @@ use yii\helpers\Url;
                     ?>
                     <div class="tabs_item">
                             <div class="tabs_img">
-                                <img src="images/items/<?=$product->thumb;?>">
+                                <img src="<?=Yii::$app->params['itemsImagesPath'].$product->thumb;?>">
                             </div>
                         <a href="<?=Url::to(['catalog/item', 'id' => $product->id]);?>" class="tabs_link_item">
                             <div class="tabs_descrip">

@@ -29,7 +29,7 @@ $this->registerCssFile("css/slick.css");
                     foreach($item['images'] as $image){
                 ?>
                     <div class="img">
-                        <img src="images/items/<?=$image['big_image'];?>">
+                        <img src="<?=Yii::$app->params['itemsImagesPath'].$image['big_image'];?>">
                     </div>
                 <?php
                     }
@@ -40,7 +40,7 @@ $this->registerCssFile("css/slick.css");
                 foreach($item['images'] as $image){
                     ?>
                     <div class="miniImg">
-                        <img src="images/items/<?=$image['small_image'];?>">
+                        <img src="<?=Yii::$app->params['itemsImagesPath'].$image['small_image'];?>">
                     </div>
                     <?php
                 }
