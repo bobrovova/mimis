@@ -85,7 +85,11 @@ class ItemsController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
-            $colors = Items::findBySql("SELECT id, color FROM items WHERE id_product = ".$model->id_product. " ORDER BY color_rank")->all();
+            $colors = Items::find()
+                ->select(["id", "color"])
+                ->where(["=", "id_product", $model->id_product])
+                ->orderBy("color_rank")
+                ->all();
             $fields = ExtraVariations::findAll([
                 'item_id' => $model->id,
             ]);
@@ -121,12 +125,6 @@ class ItemsController extends Controller
     protected function findModel($id)
     {
         if (($model = Items::findOne($id)) !== null) {
-            /*foreach($model->getFields()->asArray()->all() as $field){
-                $tmp['id'] = $field['field_id'];
-                $tmp['name'] = $field['name'];
-                $model->fields[] = $tmp;
-            }*/
-
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

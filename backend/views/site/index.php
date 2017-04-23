@@ -1,10 +1,28 @@
 <?php
 
-/* @var $this yii\web\View */
 use yii\helpers\Url;
-$this->title = 'My Yii Application';
-$this->registerJsFile('js/bootstrap-treeview.js', ['position' => \yii\web\View::POS_END]);
+use yii\widgets\LinkPager;
 ?>
+<?php
+    $searchPanel = new \yiister\gentelella\widgets\Panel([
+        'header' => 'Поиск',
+        'options' => [
+            'class' => 'x_panel'
+        ]
+    ]);
+?>
+    <form action="<?=Url::to(["site/index", 'category' => (!empty($category->id)) ? $category->id : ''])?>" method="post">
+        <div class="input-group">
+            <input class="form-control" type="text" name="search" placeholder="Введите наименование товара">
+            <input type="hidden" name="category" value="<?=(!empty($category)) ? $category->id : ''?>">
+            <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary">Искать!</button>
+            </span>
+        </div>
+    </form>
+<?=$searchPanel->run();?>
+
 <?php
     $panel = new \yiister\gentelella\widgets\Panel([
         'header' => 'Категории',
@@ -14,19 +32,24 @@ $this->registerJsFile('js/bootstrap-treeview.js', ['position' => \yii\web\View::
     ]);
 ?>
     <ul>
-        <?php
-        $lastLevel = 1;
-        foreach($dataProvider as $item){
-            if($lastLevel < $item['level']){
-                echo "<ul>";
-            }
-            if($lastLevel > $item['level']){
-                echo "</ul>";
-            }
-            $lastLevel = $item['level'];
-            echo "<li><a href='index.php?r=site/index&category=$item[id]'>$item[name] (id: $item[id])</a></li>";
-        }
-        ?>
+        <li>
+            <a href='index.php?r=site/index'>Все</a>
+            <ul>
+                <?php
+                $lastLevel = 1;
+                foreach($dataProvider as $item){
+                    if($lastLevel < $item['level']){
+                        echo "<ul>";
+                    }
+                    if($lastLevel > $item['level']){
+                        echo "</ul>";
+                    }
+                    $lastLevel = $item['level'];
+                    echo "<li><a href='index.php?r=site/index&category=$item[id]'>$item[name]</a></li>";
+                }
+                ?>
+            </ul>
+        </li>
     </ul>
 <?=
     $panel->run();
@@ -70,6 +93,9 @@ $this->registerJsFile('js/bootstrap-treeview.js', ['position' => \yii\web\View::
         </tr>
         <?php endforeach; ?>
     </table>
-<?=
+<?php
+    echo LinkPager::widget([
+        'pagination' => $pagination,
+    ]);
     $panelItems->run();
 ?>

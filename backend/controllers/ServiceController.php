@@ -13,11 +13,20 @@ class ServiceController extends Controller
 {
     public function actionLoadProducts()
     {
-        $importController = new ImportJsonController();
-        $results = $importController->import("1c.json");
-        return $this->render('import', [
-            'results' => $results,
-        ]);
+        if(!empty(Yii::$app->request->get("file"))) {
+            $importController = new ImportJsonController();
+            $results = $importController->import("1c.json");
+            return $this->render('import', [
+                'results' => $results,
+            ]);
+        } else {
+            $files = scandir("../../importjson");
+            unset($files[0]);
+            unset($files[1]);
+            return $this->render('selectfiles', [
+                'files' => $files,
+            ]);
+        }
     }
 
     function jsondecode ($sText){

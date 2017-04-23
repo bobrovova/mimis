@@ -113,6 +113,11 @@ class CatalogController extends Controller
     }
 
     public function actionCart(){
+        if(empty($_COOKIE["crtss"])){
+            $crtss = uniqid('', true);
+            setcookie("crtss", $crtss);
+        }
+
         if(yii::$app->user->isGuest){
             $cartItems = Cart::findAll([
                 'session_id' => $_COOKIE['crtss']

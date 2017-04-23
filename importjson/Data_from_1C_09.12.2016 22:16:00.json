@@ -1,0 +1,69 @@
+﻿{
+  "count": "2",
+  "product1": {
+    "article": "fdc502f9-1e77-11e6-872c-0022154a2410",
+    "name": "1004 Dolika Комплект (Халат и сорочка)",
+    "description": "",
+    "price": "1200,00",
+    "category": "Нижнее белье",
+    "params": {
+		"": ""
+	},
+    "sizecolor": {
+		"Cиний/молочный": {
+			"L": {
+				"balance": "0",
+				"price_opt": "730,00"
+			},
+			"XL": {
+				"balance": "0",
+				"price_opt": "730,00"
+			},
+			"XXL": {
+				"balance": "0",
+				"price_opt": "730,00"
+			}
+		},
+		"Cиний/розовый": {
+			"L": {
+				"balance": "0",
+				"price_opt": "730,00"
+			},
+			"XL": {
+				"balance": "0",
+				"price_opt": "730,00"
+			},
+			"XXL": {
+				"balance": "0",
+				"price_opt": "730,00"
+			}
+		}
+	}
+},
+  "product2": {
+    "article": "fdc5031c-1e77-11e6-872c-0022154a2410",
+    "name": "1005 Dolika Комплект (Халат и сорочка)",
+    "description": "",
+    "price": "1200,00",
+    "category": "Нижнее белье",
+    "params": {
+		"": ""
+	},
+    "sizecolor": {
+		"Cиний/розовый": {
+			"L": {
+				"balance": "0",
+				"price_opt": "730,00"
+			},
+			"XL": {
+				"balance": "0",
+				"price_opt": "730,00"
+			},
+			"XXL": {
+				"balance": "0",
+				"price_opt": "730,00"
+			}
+		}
+	}
+}
+}

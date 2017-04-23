@@ -76,7 +76,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $categories = \app\models\Category::find()
-            ->where("parent_id = 0")
+            ->where(["=", "parent_id", 0])
             ->with('childCategories')
             ->orderBy("left_key")
             ->all();

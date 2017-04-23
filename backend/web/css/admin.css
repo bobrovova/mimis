@@ -72,6 +72,8 @@ a.desc:after {
 .treeCategory {
   width: 20% !important;
   float: left; }
+  .treeCategory ul {
+    padding-left: 10px; }
 
 .itemsCategory {
   float: left;
